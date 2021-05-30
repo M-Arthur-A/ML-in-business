@@ -5,7 +5,7 @@
 
 ML: XGBoost, sklearn, pandas, numpy
 API: flask
-Данные: с kaggle - https://www.kaggle.com/shivamb/real-or-fake-fake-jobposting-prediction
+Данные: с kaggle - https://www.kaggle.com/c/sberbank-russian-housing-market/data
 
 Задача: предсказать цену недвижимости. Задача регрессии
 
@@ -76,6 +76,6 @@ $ docker run -d -p 8180:8180 -p 8181:8181 -v <your_local_path_to_pretrained_mode
 ### Переходим на localhost:8181
 Главная страница фронтенда (в рамках данной задачи не применим ручной ввод)  
 
-### Для взаимодействия с сервером по API требуется использования test_request.py
-**Основные запросы принимаются методом POST на порт 8180**
-Данный файл берет json из папки model, направляет на сервер и получает ответ
+### Для взаимодействия с сервером по API требуется использованиe test_request.py
+**Основные POST запросы сервер слушает на 8180**
+test_request.py берет json из папки model, направляет на сервер и получает ответ с предиктом
